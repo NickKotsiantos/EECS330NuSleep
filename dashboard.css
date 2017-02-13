@@ -1,0 +1,48 @@
+body {
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+.container {
+	text-align: center;
+}
+
+.var-display {
+	
+}
+
+.variable-btn {
+	height: 12em;
+	width:17em;
+	border-radius: 2em;
+}
+
+.var-value {
+	line-height: 1em;
+	font-size: 7em;
+	text-align: center;
+}
+
+
+#var-type {
+	font-size: 2em;
+	text-align: center;
+}
+
+
+#var1-value {
+	margin-left: 0.32em;
+}
+
+#update_button {
+	margin-top: 3em;
+}
+
+#variables-container {
+	margin-top: 4em;
+}
+
+#row-2 {
+	margin-top: 4em;
+}
+
