@@ -1,16 +1,65 @@
 /* Move down content because we have a fixed navbar that is 50px tall */
+
+
 body {
   padding-top: 50px;
-  padding-bottom: 20px;
+  padding-bottom: 100px;
+  background: linear-gradient(LightCyan,AliceBlue);
+}
 
+#mainNav {
+  background-color: LightCyan;
+  border: none;
+  height: 6em;
+  padding: 0em;
+}
+
+.logo {
+	position: absolute;
+	top: 0em;
+	left:0em;
 }
 
 .jumbotron {
+	height: 30em;
+	margin-top: 1.5em;
+	padding-top: 5em; 
+}
+
+#slideshow1 {
 	background-image: url('http://picalls.com/wp-content/uploads/2015/03/Amazing-night-sky.jpg');
 	background-position: 100% 85%;
-	background-size: 100%;
+	background-size: 2200px;
+	background-repeat: no-repeat;
 	color: white;
 }
+
+#slideshow2 {
+	background-image: url('https://s-media-cache-ak0.pinimg.com/originals/1f/64/0c/1f640c6202fb7433acc2bab3e1fbe3ef.jpg');
+	background-position: 20% 90%;
+	background-size: 1600px;
+	background-repeat: no-repeat;
+	color: white;
+}
+
+#slideshow3 {
+	background-image: url('http://i.dailymail.co.uk/i/pix/2017/01/05/18/3AAF1FFD00000578-4092196-image-a-4_1483641764210.jpg');
+	background-position: 35% 40%;
+	background-size: 1600px;
+	background-repeat: no-repeat;
+	color: white;
+}
+
+.descriptions {
+	border: 2px solid SteelBlue;
+	border-radius: 1em;
+	padding: 0.2em 0.4em;
+	height: 14em;
+	width: 20em;
+	text-align: center;
+	vertical-align: middle;
+}
+
 
 .navbar-custom {
   background: #2C3E50;
@@ -124,7 +173,7 @@ body {
 }
 
 #override .loginbtn:hover {
-	background-color: SteelBlue;
+  background-color: SteelBlue;
 }
 
 #override .loginbtn span:after {
@@ -151,6 +200,10 @@ body {
 
 #override #tryitnow span {
 	top: 0.4em;
+}
+
+#override #loginbtn {
+	margin-top: 1.5em;
 }
 
 #override #tryitnow {

@@ -37,7 +37,7 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="#page-top">NuSleep</a>
+                <a class="navbar-brand" href="#page-top" id="logo"><img src="NuSleeplogo.png" height="70"></a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -54,31 +54,61 @@
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container-fluid -->
-    </nav>
+  </nav>
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron">
-      <div class="container" id="container1">
-        <h1>Your Sleep Matters</h1>
-        <p>NuSleep helps you perfect your sleep by finding your ideal sleeping enviroment</p>
-        <p><a class="loginbtn" id="tryitnow" href="login.html" role="button"><span>Try it now</span></a></p>
+    <div class="mySlides">
+      <div class="jumbotron" id="slideshow1">
+        <div class="container">
+          <h1>Your Sleep Matters</h1>
+          <p>NuSleep helps you perfect your sleep by finding your ideal sleeping enviroment</p>
+          <p><a class="loginbtn" id="tryitnow" href="register.html" role="button"><span>Try it now</span></a></p>
+        </div>
       </div>
     </div>
+
+    <div class="mySlides">
+      <div class="jumbotron" id="slideshow2">
+        <div class="container">
+          <h1>Your Sleep Matters</h1>
+          <p>NuSleep helps you perfect your sleep by finding your ideal sleeping enviroment</p>
+          <p><a class="loginbtn" id="tryitnow" href="login.html" role="button"><span>Try it now</span></a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="mySlides">
+      <div class="jumbotron" id="slideshow3">
+        <div class="container">
+          <h1>Your Sleep Matters</h1>
+          <p>NuSleep helps you perfect your sleep by finding your ideal sleeping enviroment</p>
+          <p><a class="loginbtn" id="tryitnow" href="login.html" role="button"><span>Try it now</span></a></p>
+        </div>
+      </div>
+    </div>
+    
 
     <div class="container">
       <!-- Example row of columns -->
       <div class="row">
         <div class="col-md-4">
+        <div class="descriptions">
           <h2>Optimize Enviroment</h2>
           <p>NuSleep will detect how variables are affecting your sleep and provide ideal values for those variables. Add custom variables you believe affect your sleep.</p>
+        </div>  
         </div>
         <div class="col-md-4">
+        <div class="descriptions">
           <h2>Track Sleep Patterns</h2>
           <p>NuSleep provides detailed performace dashboards for the user to analyze their sleeping patterns to see how they are improving.</p>
+        </div>
        </div>
         <div class="col-md-4">
+        <div class="descriptions
+        ">
           <h2>Smart Alarm</h2>
           <p>NuSleep provides a smart alarm that connects to the user's fitbit, allowing for a refreshing wake up by enabling the fitbit to rumble at the end of a REM cycle</p>
+        </div>  
         </div>
       </div>
 
@@ -88,6 +118,24 @@
         <p>&copy; 2017 NuSleep, Inc.</p>
       </footer>
     </div> <!-- /container -->
+
+    <script>
+      var myIndex = 0;
+      carousel();
+
+      function carousel() {
+          var i;
+          var x = document.getElementsByClassName("mySlides");
+          for (i = 0; i < x.length; i++) {
+             x[i].style.display = "none"; 
+          }
+          myIndex++;
+          if (myIndex > x.length) {myIndex = 1}    
+          x[myIndex-1].style.display = "block";  
+          setTimeout(carousel, 3000); // Change image every 2 seconds
+      }
+    </script>
+  
 
 
     <!-- Bootstrap core JavaScript
