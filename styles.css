@@ -4,11 +4,11 @@
 body {
   padding-top: 50px;
   padding-bottom: 100px;
-  background: linear-gradient(LightCyan,AliceBlue);
+  background: linear-gradient(gainsboro,gainsboro);
 }
 
 #mainNav {
-  background-color: LightCyan;
+  background-color: gainsboro;
   border: none;
   height: 6em;
   padding: 0em;
@@ -147,7 +147,7 @@ body {
   width: 8em;
   height: 3em;
   display: inline-block;
-  background-color: SteelBlue;
+  background-color: MediumAquaMarine;
   border: none;
   text-align: center;
   font-family: Arial, "Montserrat", "Helvetica Neue", Helvetica, sans-serif;

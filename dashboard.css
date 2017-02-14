@@ -3,28 +3,46 @@ body {
   padding-bottom: 20px;
 }
 
-.container {
+#tempplot {
+	transition: all 3s;
+}
+
+.varbtn:focus {
+	outline:none;
+	background-color:slategrey;
+}
+
+.varbtn:hover {
+	background-color: slategrey;
+}
+
+.col {
+	display: inline-block;
+	margin: 2em 2em;
+	transition: all 2s;
+}
+
+.contain {
 	text-align: center;
 }
 
-.var-display {
-	
-}
-
-.variable-btn {
+.varbtn {
 	height: 12em;
 	width:17em;
 	border-radius: 2em;
+	background-color: gainsboro;
+	border: none;
+	transition: all 0.5s;
 }
 
 .var-value {
 	line-height: 1em;
-	font-size: 7em;
+	font-size: 5em;
 	text-align: center;
 }
 
 
-#var-type {
+.var-type {
 	font-size: 2em;
 	text-align: center;
 }
@@ -38,11 +56,12 @@ body {
 	margin-top: 3em;
 }
 
-#variables-container {
+#var-container {
 	margin-top: 4em;
 }
 
 #row-2 {
 	margin-top: 4em;
 }
+
 

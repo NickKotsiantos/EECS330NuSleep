@@ -29,6 +29,7 @@
   </head>
 
   <body>
+  <script type="text/javascript" src="dashboard.js"></script>
 
   <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
         <div class="container">
@@ -37,7 +38,7 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="index.html">NuSleep</a>
+                <a class="navbar-brand" href="#page-top" id="logo">Nu Sleep</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -53,57 +54,57 @@
         <!-- /.container-fluid -->
     </nav>
 
-    <div class="container">
+    <div class="contain">
       <button id="update_button" type="button" class="btn btn-default btn-lg">Update Sleep Enviroment</button>
     </div>
-
-    <div id="variables-container" class="container">
+  
+    <div id="var-container" class="contain">
       <!-- Variable Buttons -->
-      <div class="row">
-        <div class="col-md-4">
-          <button type="button" class="btn btn-default variable-btn">
+      <div class="varrow">
+        <div class="col" id="var1">
+          <button type="button" id="varbtn1" class="varbtn" onclick="graph('1')">
             <div class="var-display">
                 <h3 id="var1-value" class="var-value">73&deg;</h3>
                 <p class="var-type"><b>Temperature</b></p>
             </div>
           </button>
         </div>
-        <div class="col-md-4">
-          <button type="button" class="btn btn-default variable-btn">
+        <div class="col" id="var2">
+          <button type="button" id="varbtn2" class="varbtn" onclick="graph('2')">
             <div class="var-display">
                 <h3 class="var-value">84%</h3>
                 <p class="var-type"><b>Humidity</b></p>
             </div>
           </button>
        </div>
-        <div class="col-md-4">
-          <button type="button" class="btn btn-default variable-btn">
+        <div class="col" id="var3">
+          <button type="button" id="varbtn3" class="varbtn" onclick="graph('3')">
             <div class="var-display">
-                <h3 class="var-value" style="font-size:6em">5932</h3>
-                <p class="var-type" style="margin-top:1.7em"><b>Steps</b></p>
+                <h3 class="var-value">5932</h3>
+                <p class="var-type"><b>Steps</b></p>
             </div>
           </button>
         </div>
       </div>
-      <div id="row-2" class="row">
-        <div class="col-md-4">
-          <button type="button" class="btn btn-default variable-btn">
+      <div id="row-2" class="varrow">
+        <div class="col" id="var4">
+          <button type="button" id="varbtn4" class="varbtn" onclick="graph('4')">
             <div class="var-display">
                 <h3 class="var-value">No</h3>
                 <p class="var-type"><b>Workout</b></p>
             </div>
           </button>
         </div>
-        <div class="col-md-4">
-          <button type="button" class="btn btn-default variable-btn">
+        <div class="col" id="var5">
+          <button type="button" id="varbtn5" class="varbtn" onclick="graph('5')">
             <div class="var-display">
                 <h3 class="var-value">Dim</h3>
                 <p class="var-type"><b>Light Setting</b></p>
             </div>
           </button>
        </div>
-        <div class="col-md-4">
-          <button type="button" class="btn btn-default variable-btn">
+        <div class="col" id="addvar">
+          <button type="button" class="varbtn">
             <div class="var-display">
                 <h3 class="var-value">+</h3>
                 <p class="var-type"><b>Add Variable</b></p>
@@ -112,6 +113,48 @@
         </div>
       </div>
     </div>
+
+      <script type="text/javascript" src="plotlyjs-bundle.js"></script>
+            
+            
+        <script type="text/javascript" src="figure.js"></script>
+        <div></div>
+        <div id="tempplot" style="width: 100%; height: 100%;" class="plotly-graph-div"></div>
+        <script type="text/javascript">
+            (function(){
+                window.PLOTLYENV={'BASE_URL': 'https://plot.ly'};
+
+                var gd = document.getElementById('tempplot');
+                gd.style.opacity = 0;
+                var resizeDebounce = null;
+
+                function resizePlot() {
+                    var bb = gd.getBoundingClientRect();
+                    Plotly.relayout(gd, {
+                        width: bb.width,
+                        height: bb.height
+                    });
+                }
+
+                
+                window.addEventListener('resize', function() {
+                    if (resizeDebounce) {
+                        window.clearTimeout(resizeDebounce);
+                    }
+                    resizeDebounce = window.setTimeout(resizePlot, 100);
+                });
+                
+
+                
+                Plotly.plot(gd,  {
+                    data: figure.data,
+                    layout: figure.layout,
+                    frames: figure.frames,
+                    config: {"mapboxAccessToken": "pk.eyJ1IjoiY2hyaWRkeXAiLCJhIjoiY2lxMnVvdm5iMDA4dnhsbTQ5aHJzcGs0MyJ9.X9o_rzNLNesDxdra4neC_A", "linkText": "Export to plot.ly", "showLink": true}
+                });
+                
+           }());
+        </script>
 
 
 
