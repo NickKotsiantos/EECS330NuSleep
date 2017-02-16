@@ -9,6 +9,10 @@
     <meta name="author" content="">
     <link rel="icon" href=http://knockoutcampaign.com/wp-content/uploads/2015/04/logo11111-24-300x300.png>
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
     <title>NuSleep - Find Your Perfect Sleep</title>
 
     <!-- Bootstrap core CSS -->
@@ -38,7 +42,7 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="#page-top" id="logo">Nu Sleep</a>
+                <a class="navbar-brand" href="dashboard.html" id="logo">NuSleep</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -55,21 +59,22 @@
     </nav>
 
     <div class="contain">
-      <button id="update_button" type="button" class="btn btn-default btn-lg">Update Sleep Enviroment</button>
+      <p class="header" id="optimal">Your Optimal Environment</p>
     </div>
   
     <div id="var-container" class="contain">
       <!-- Variable Buttons -->
       <div class="varrow">
-        <div class="col" id="var1">
-          <button type="button" id="varbtn1" class="varbtn" onclick="graph('1')">
+          <div class="col" id="var1" data-toggle="tooltip" title="Click here to see how temperature affects your sleep which is tracked by your Nest">
+          <button type="button" id="varbtn1" class="varbtn" onclick="graph(1)">
             <div class="var-display">
                 <h3 id="var1-value" class="var-value">73&deg;</h3>
                 <p class="var-type"><b>Temperature</b></p>
             </div>
           </button>
         </div>
-        <div class="col" id="var2">
+        
+        <div class="col" id="var2" data-toggle="tooltip" title="Click here to see how humidity affects your sleep which is tracked by your Nest">
           <button type="button" id="varbtn2" class="varbtn" onclick="graph('2')">
             <div class="var-display">
                 <h3 class="var-value">84%</h3>
@@ -77,7 +82,7 @@
             </div>
           </button>
        </div>
-        <div class="col" id="var3">
+        <div class="col" id="var3" data-toggle="tooltip" title="Click here to see how the number of steps affects your sleep which is tracked by your smartphone accelerometer">
           <button type="button" id="varbtn3" class="varbtn" onclick="graph('3')">
             <div class="var-display">
                 <h3 class="var-value">5932</h3>
@@ -87,7 +92,7 @@
         </div>
       </div>
       <div id="row-2" class="varrow">
-        <div class="col" id="var4">
+        <div class="col" id="var4" data-toggle="tooltip" title="Click here to see how your workouts affect your sleep which you manually input">
           <button type="button" id="varbtn4" class="varbtn" onclick="graph('4')">
             <div class="var-display">
                 <h3 class="var-value">No</h3>
@@ -95,7 +100,7 @@
             </div>
           </button>
         </div>
-        <div class="col" id="var5">
+        <div class="col" id="var5" data-toggle="tooltip" title="Click here to see how light setting affects your sleep which you manually input">
           <button type="button" id="varbtn5" class="varbtn" onclick="graph('5')">
             <div class="var-display">
                 <h3 class="var-value">Dim</h3>
@@ -103,7 +108,7 @@
             </div>
           </button>
        </div>
-        <div class="col" id="addvar">
+        <div class="col" id="addvar" data-toggle="tooltip" title="Click here to add another variable that you believe affects your sleep">
           <button type="button" class="varbtn">
             <div class="var-display">
                 <h3 class="var-value">+</h3>
@@ -112,13 +117,14 @@
           </button>
         </div>
       </div>
+      <a id="backbtn" href="dashboard.html"><strong>Back</strong></a>
     </div>
 
       <script type="text/javascript" src="plotlyjs-bundle.js"></script>
             
             
         <script type="text/javascript" src="figure.js"></script>
-        <div></div>
+
         <div id="tempplot" style="width: 100%; height: 100%;" class="plotly-graph-div"></div>
         <script type="text/javascript">
             (function(){
@@ -154,6 +160,19 @@
                 });
                 
            }());
+        </script>
+
+        <script>
+        /*
+          $(document).ready(function(){
+              $('[data-toggle="tooltip"]').tooltip(); 
+          });
+        
+          $('[data-toggle="tooltip"]').tooltip({
+            trigger : 'hover'
+          }); 
+        */
+          
         </script>
 
 

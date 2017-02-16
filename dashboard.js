@@ -1,21 +1,19 @@
 
-
 function graph(val)
 {
-    var str = "var".concat(val);
-    var str2 = "varbtn".concat(val);
-    var element = document.getElementById(str);
+    var title = document.getElementById("optimal");
+    var backbtn = document.getElementById("backbtn");
     var allelements = document.getElementsByClassName("col");
-    var elementbtn = document.getElementById(str2);
-    var updatebtn = document.getElementById("update_button");
     var tempplot = document.getElementById("tempplot");
-
+    val--;
     for(var i=0;i<allelements.length;i++)
     {
-    	allelements[i].style.display = "none";	
-    }
-    updatebtn.style.display = "none";
-    element.style.display = "block";	
-    elementbtn.style.backgroundColor = "slategrey";
+        if(val!=i)
+        {allelements[i].style.display = "none"; } 
+    } 
+
+    backbtn.style.display = "block";
     tempplot.style.opacity = 1;
+    title.style.display = "none";
+    
 }

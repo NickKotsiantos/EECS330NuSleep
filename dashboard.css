@@ -1,25 +1,58 @@
 body {
   padding-top: 50px;
   padding-bottom: 20px;
+  background-color:#2f323b;
 }
 
+#backbtn {
+	display: none;
+	margin: auto;
+	margin-bottom: 1em;
+	border-radius: 0.5em;
+	background: linear-gradient(#18aad9,#007ce2);
+	width:7em;
+	height:2.5em;
+	font-size:1.5em;
+	font-family: Helvetica, Arial, sans-serif;
+	color:white;
+	padding-top:0.5em;
+}
+
+.header
+{
+	color:#a087ff;
+	font-size: 4em;
+	margin-top: 1em;
+	box-shadow: 2em;
+}
 #tempplot {
-	transition: all 3s;
+	transition: all 1s;
 }
 
 .varbtn:focus {
 	outline:none;
-	background-color:slategrey;
+	background: linear-gradient(#a087ff,#a087ff);
+	color: white;
+}
+
+.varbtn:hover {
+	background: linear-gradient(#a087ff,#a087ff);
+	color: white;
+
+}
+
+.varrow {
+	margin: 3em 2em;
+}
+
+.col {
+	display: inline;
+	margin: 1.5em 2em;
+	transition: all 0s;
 }
 
 .varbtn:hover {
 	background-color: slategrey;
-}
-
-.col {
-	display: inline-block;
-	margin: 2em 2em;
-	transition: all 2s;
 }
 
 .contain {
@@ -29,6 +62,11 @@ body {
 .varbtn {
 	height: 12em;
 	width:17em;
+	border-radius: 1em;
+	background: linear-gradient(#18aad9,#007ce2);
+	border: none;
+	transition: all 0s;
+	color: lightgrey;
 	border-radius: 2em;
 	background-color: gainsboro;
 	border: none;
@@ -45,6 +83,7 @@ body {
 .var-type {
 	font-size: 2em;
 	text-align: center;
+	color: black;
 }
 
 
@@ -52,16 +91,7 @@ body {
 	margin-left: 0.32em;
 }
 
-#update_button {
-	margin-top: 3em;
-}
-
 #var-container {
 	margin-top: 4em;
 }
-
-#row-2 {
-	margin-top: 4em;
-}
-
 
