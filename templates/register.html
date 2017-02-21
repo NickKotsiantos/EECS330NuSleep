@@ -9,17 +9,14 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>NuSleep Login</title>
+    <title>NuSleep Register</title>
 
     <!-- Bootstrap core CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
     <!-- Custom styles for this template -->
-    <link href="login.css" rel="stylesheet">
+    <link href="../css/login.css" rel="stylesheet">
 
-    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -33,7 +30,9 @@
     <div class="container">
 
       <form class="form-signin">
-        <h2 class="form-signin-heading background">Please log in</h2>
+        <h2 class="form-signin-heading background">Please Register</h2>
+        <label for="inputName" class="sr-only">Name</label>
+        <input type="name" id="inputName" class="form-control" placeholder="Full Name" required autofocus>
         <label for="inputEmail" class="sr-only">Email address</label>
         <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
         <label for="inputPassword" class="sr-only">Password</label>
@@ -43,10 +42,10 @@
             <input type="checkbox" value="remember-me"> Remember me
           </label>
         </div>
-        <a href="dashboard.html" class="btn btn-lg btn-primary btn-block" role="button" type="submit">Log In</a>
+        <a href="pricing.html" class="btn btn-lg btn-primary btn-block" role="button" type="submit">Register</a>
       </form>
-      <p class="background">New Member? 
-      	<a href="register.html">Sign up</a>
+      <p class="background">Already a member? 
+      	<a href="login.html">Log in</a>
       </p>
 
     </div> <!-- /container -->
