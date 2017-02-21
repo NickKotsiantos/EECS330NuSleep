@@ -174,53 +174,7 @@ h6 {
     width: 200px;
     border-top: 3px solid #e7e7e7;
 }
-
-.banner {
-    padding: 100px 0;
-    color: #f8f8f8;
-    background: url(../img/banner-bg.jpg) no-repeat center center;
-    background-size: cover;
-}
-
-.banner h2 {
-    margin: 0;
-    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
-    font-size: 3em;
-}
-
-.banner ul {
-    margin-bottom: 0;
-}
-
-.banner-social-buttons {
-    float: right;
-    margin-top: 0;
-}
-
-@media(max-width:1199px) {
-    ul.banner-social-buttons {
-        float: left;
-        margin-top: 15px;
-    }
-}
-
-@media(max-width:767px) {
-    .banner h2 {
-        margin: 0;
-        text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
-        font-size: 3em;
-    }
-
-    ul.banner-social-buttons > li {
-        display: block;
-        margin-bottom: 20px;
-        padding: 0;
-    }
-
-    ul.banner-social-buttons > li:last-child {
-        margin-bottom: 0;
-    }
-}
+c
 
 footer {
     padding: 50px 0;
@@ -235,9 +189,9 @@ p.copyright {
     background-color:SteelBlue; 
 }
 
-#override .loginbtn {
+#override .loginbtn, #aboutbtn {
   border-radius: 0.25em;
-  margin: 0em 0.5em 1em 0em;
+  margin: 0em 0.5em 0em 0em;
   width: 9em;
   height: 2em;
   display: inline-block;
@@ -256,7 +210,7 @@ p.copyright {
         2px 2px 4px 0 rgba(0,0,0,.25);
 }
 
-#override .loginbtn span {
+#override .loginbtn span, #aboutbtn span {
   cursor: pointer;
   color: white;
   display: inline-block;
@@ -265,7 +219,7 @@ p.copyright {
   vertical-align: middle;
 }
 
-#override .loginbtn:hover {
+#override .loginbtn:hover, #aboutbtn:hover{
   background-color: SteelBlue;
 }
 
@@ -296,13 +250,31 @@ p.copyright {
 }
 
 
-#override #tryitnow span {
-    top: 0.7em;
+#override #aboutbtn span {
+    top: 0.5em;
+    font-family: Arial, "Montserrat", "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 1.3em;
 }
 
-#override #tryitnow {
+#override #aboutbtn {
     width: 12em;
     height: 3em;
 }
+
+#newmember {
+
+    font-size: 0.75em;
+    margin-bottom: 0.2em;
+    margin-left: 1.25em;
+}
+
+#signup {
+  color: SteelBlue;
+}
+
+#signup:hover {
+  text-decoration: underline;
+}
+
 
 

@@ -1,5 +1,5 @@
 
-var offset = 65;
+var offset = 72;
 
 jQuery.noConflict();
 jQuery(function($) {
