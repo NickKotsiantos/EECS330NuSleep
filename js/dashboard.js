@@ -2,6 +2,7 @@
 function graph(val)
 {
     var title = document.getElementById("optimal");
+    var title2 = document.getElementById("optimal2");
     var backbtn = document.getElementById("backbtn");
     var allelements = document.getElementsByClassName("col");
     var tempplot = document.getElementById("tempplot");
@@ -15,5 +16,6 @@ function graph(val)
     backbtn.style.display = "block";
     tempplot.style.opacity = 1;
     title.style.display = "none";
+    title2.style.display = "none";
     
 }

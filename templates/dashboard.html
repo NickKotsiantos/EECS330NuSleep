@@ -61,7 +61,7 @@
     <div id="var-container" class="contain">
       <!-- Variable Buttons -->
       <div class="varrow">
-          <div class="col" id="var1" data-toggle="tooltip" title="Click here to see how temperature affects your sleep which is tracked by your Nest">
+        <div class="col" id="var1" data-toggle="tooltip" title="Click here to see how temperature affects your sleep which is tracked by your Nest">
           <button type="button" id="varbtn1" class="varbtn" onclick="graph(1)">
             <div class="var-display">
                 <h3 id="var1-value" class="var-value">73&deg;</h3>
@@ -71,39 +71,42 @@
         </div>
         
         <div class="col" id="var2" data-toggle="tooltip" title="Click here to see how humidity affects your sleep which is tracked by your Nest">
-          <button type="button" id="varbtn2" class="varbtn" onclick="graph('2')">
+          <button type="button" id="varbtn2" class="varbtn" onclick="graph(2)">
             <div class="var-display">
                 <h3 class="var-value">84%</h3>
                 <p class="var-type"><b>Humidity</b></p>
             </div>
           </button>
        </div>
-        <div class="col" id="var3" data-toggle="tooltip" title="Click here to see how the number of steps affects your sleep which is tracked by your smartphone accelerometer">
-          <button type="button" id="varbtn3" class="varbtn" onclick="graph('3')">
-            <div class="var-display">
-                <h3 class="var-value">5932</h3>
-                <p class="var-type"><b>Steps</b></p>
-            </div>
-          </button>
-        </div>
-      </div>
-      <div id="row-2" class="varrow">
-        <div class="col" id="var4" data-toggle="tooltip" title="Click here to see how your workouts affect your sleep which you manually input">
-          <button type="button" id="varbtn4" class="varbtn" onclick="graph('4')">
-            <div class="var-display">
-                <h3 class="var-value">No</h3>
-                <p class="var-type"><b>Workout</b></p>
-            </div>
-          </button>
-        </div>
-        <div class="col" id="var5" data-toggle="tooltip" title="Click here to see how light setting affects your sleep which you manually input">
-          <button type="button" id="varbtn5" class="varbtn" onclick="graph('5')">
+       <div class="col" id="var3" data-toggle="tooltip" title="Click here to see how light setting affects your sleep which you manually input">
+          <button type="button" id="varbtn3" class="varbtn" onclick="graph(3)">
             <div class="var-display">
                 <h3 class="var-value">Dim</h3>
                 <p class="var-type"><b>Light Setting</b></p>
             </div>
           </button>
        </div>
+      </div>
+       <div class="contain">
+          <p class="header" id="optimal2">Your Optimal Habits</p>
+       </div>
+      <div id="row-2" class="varrow">
+        <div class="col" id="var4" data-toggle="tooltip" title="Click here to see how the number of steps affects your sleep which is tracked by your smartphone accelerometer">
+          <button type="button" id="varbtn4" class="varbtn" onclick="graph(4)">
+            <div class="var-display">
+                <h3 class="var-value">5932</h3>
+                <p class="var-type"><b>Steps</b></p>
+            </div>
+          </button>
+        </div>
+        <div class="col" id="var5" data-toggle="tooltip" title="Click here to see how your workouts affect your sleep which you manually input">
+          <button type="button" id="varbtn5" class="varbtn" onclick="graph(5)">
+            <div class="var-display">
+                <h3 class="var-value">No</h3>
+                <p class="var-type"><b>Workout</b></p>
+            </div>
+          </button>
+        </div>
         <div class="col" id="addvar" data-toggle="tooltip" title="Click here to add another variable that you believe affects your sleep">
           <button type="button" class="varbtn">
             <div class="var-display">
@@ -113,6 +116,7 @@
           </button>
         </div>
       </div>
+
       <a id="backbtn" href="dashboard.html"><strong>Back</strong></a>
     </div>
 
