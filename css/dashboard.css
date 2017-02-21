@@ -18,6 +18,11 @@ body {
 	padding-top:0.5em;
 }
 
+#mainNav {
+	height: 5em;
+	background: rgba(220, 220, 220, 0.9);
+}
+
 .header
 {
 	color:#a087ff;
