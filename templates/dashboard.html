@@ -28,31 +28,41 @@
     <![endif]-->
   </head>
 
-  <body>
-  <script type="text/javascript" src="../js/dashboard.js"></script>
+  <body id="override">
+  <script type="text/javascript" src="dashboard.js"></script>
 
-  <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
-                </button>
-                <a class="navbar-brand" href="dashboard.html" id="logo"><img src="../img/NuSleepLogo.png" height="50"></i></a>
-            </div>
+  <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
+      <div class="container topnav">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+              <a class="navbar-brand" href="#"><img src="../img/NuSleepLogo.png" height="50"></a>
+          </div>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav navbar-right">
+                  <li>
+                      <a href="alarm.html" class="navbtn" id="alarmbtn" role="button"><span>Alarm</span></a>
+                  </li>
+                  <li><a href="#"  class="navbtn" id="settingsbtn" role="button" ><span> Settings</span></a></li>
+                  <li><a href="../index.html" class="navbtn" id="logoutbtn" role="button"><span>Log Out</span></a></li>
+              </ul>
+          </div>
+          <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container -->
+  </nav>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav nav-pills navbar-right">
-                  <li class="active"><a href="alarm.html">Set Alarm</a></li>
-                  <li><a href="#">Setting</a></li>
-                  <li><a href="../index.html">Log Out</a></li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container-fluid -->
-    </nav>
+    <div id="addvar" data-toggle="tooltip" title="Click here to add another variable that you believe affects your sleep">
+          <a href="add_variable.html"><button type="button" class="addvarbtn">
+                <h3 class="addvar-value">+</h3>
+                <p class="addvar-type"><b>Add Variable</b></p>
+
+          </button></a>
+    </div>
+
+    <div id="varcontent">
+
+    </div>
 
     <div class="contain">
       <p class="header" id="optimal">Your Optimal Environment</p>
@@ -64,8 +74,8 @@
         <div class="col" id="var1" data-toggle="tooltip" title="Click here to see how temperature affects your sleep which is tracked by your Nest">
           <button type="button" id="varbtn1" class="varbtn" onclick="graph(1)">
             <div class="var-display">
-                <h3 id="var1-value" class="var-value">73&deg;</h3>
-                <p class="var-type"><b>Temperature</b></p>
+                <h3 class="var-value">73&deg;</h3>
+                <strong><p class="var-type">Temperature</p></strong>
             </div>
           </button>
         </div>
@@ -74,7 +84,7 @@
           <button type="button" id="varbtn2" class="varbtn" onclick="graph(2)">
             <div class="var-display">
                 <h3 class="var-value">84%</h3>
-                <p class="var-type"><b>Humidity</b></p>
+                <strong><p class="var-type">Humidity</p></strong>
             </div>
           </button>
        </div>
@@ -82,7 +92,7 @@
           <button type="button" id="varbtn3" class="varbtn" onclick="graph(3)">
             <div class="var-display">
                 <h3 class="var-value">Dim</h3>
-                <p class="var-type"><b>Light Setting</b></p>
+                <strong><p class="var-type">Light Setting</p></strong>
             </div>
           </button>
        </div>
@@ -95,23 +105,15 @@
           <button type="button" id="varbtn4" class="varbtn" onclick="graph(4)">
             <div class="var-display">
                 <h3 class="var-value">5932</h3>
-                <p class="var-type"><b>Steps</b></p>
+                <strong><p class="var-type">Steps</p></strong>
             </div>
           </button>
         </div>
         <div class="col" id="var5" data-toggle="tooltip" title="Click here to see how your workouts affect your sleep which you manually input">
           <button type="button" id="varbtn5" class="varbtn" onclick="graph(5)">
             <div class="var-display">
-                <h3 class="var-value">No</h3>
-                <p class="var-type"><b>Workout</b></p>
-            </div>
-          </button>
-        </div>
-        <div class="col" id="addvar" data-toggle="tooltip" title="Click here to add another variable that you believe affects your sleep">
-          <button type="button" class="varbtn">
-            <div class="var-display">
-                <h3 class="var-value">+</h3>
-                <p class="var-type"><b>Add Variable</b></p>
+                <h3 class="var-value">None</h3>
+                <strong><p class="var-type">Workout</p></strong>
             </div>
           </button>
         </div>
@@ -174,6 +176,8 @@
         */
           
         </script>
+
+        <script type="text/javascript" src="../js/dashboard.js"></script>
 
 
 

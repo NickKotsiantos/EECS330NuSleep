@@ -28,8 +28,9 @@ body {
 {
 	color:#a087ff;
 	font-size: 4em;
-	margin-top: 1em;
+	margin-top: 0em;
 	box-shadow: 2em;
+	display: inline-block;
 }
 #tempplot {
 	transition: all 1s;
@@ -57,12 +58,44 @@ body {
 	transition: all 0s;
 }
 
-.varbtn:hover {
-	background-color: slategrey;
-}
-
 .contain {
 	text-align: center;
+}
+
+#varcontent {
+	color: white;
+	text-align: center;
+	margin: 2em 0em 0em 0em;
+	display: none;
+	font-family: Arial, "Montserrat", "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 3em;
+}
+
+.addvarbtn {
+	height: 5em;
+	width: 10em;
+	margin: 1em 0em 0em 4.9em;
+	display: inline-block;
+	border-radius: 0.5em;
+	background-color: AliceBlue;
+}
+
+.addvarbtn:hover {
+	background-color: gainsboro;
+}
+
+.addvar-value, .addvar-type {
+	line-height: 2em;
+}
+
+.addvar-value {
+	line-height: 0em;
+	font-size: 3em;
+}
+
+.addvar-type {
+	font-size: 1em;
+	margin-top: 1em;
 }
 
 .varbtn {
@@ -100,4 +133,75 @@ body {
 #var-container {
 	margin-top: 4em;
 }
+
+
+
+#override .navbtn:hover {
+    background-color:SteelBlue; 
+}
+
+#override .navbtn{
+  border-radius: 0.25em;
+  margin: 1.5em 0.5em 1.5em 0em;
+  width: 9em;
+  height: 2em;
+  display: inline-block;
+  background-color: MediumAquaMarine;
+  border: none;
+  text-align: center;
+  font-family: Arial, "Montserrat", "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 1em;
+  transition: all 0.5s;
+  cursor: pointer;
+  align-items: center;
+  box-shadow:
+        inset 0 0 2px 0 rgba(255,255,255,.4),
+        inset 0 0 3px 0 rgba(0,0,0,.4),
+        inset 0 0 3px 5px rgba(0,0,0,.05),
+        2px 2px 4px 0 rgba(0,0,0,.25);
+}
+
+
+#override .navbtn span {
+  cursor: pointer;
+  color: white;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+  vertical-align: middle;
+  bottom: 0.8em;
+}
+
+#override .navbtn:hover {
+  background-color: SteelBlue;
+}
+
+#override #logoutbtn span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -40px;
+  transition: 0.5s;
+}
+
+#override #logoutbtn:hover span {
+  padding-right: 25px;
+}
+
+#override #logoutbtn:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.navbar {
+    font-size: 14px;
+    background: rgba(220, 220, 220, 0.9);
+    border: none;
+}
+
+
+
+
+
 

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link  href="../css/add_variable.css" rel="stylesheet">
+<title>NuSleep - Find Your Perfect Sleep</title>
+</head>
+
+<div class="container">  
+<div id="contact">
+
+    <h3>Add Variable</h3>
+    <h4>Customize the way we track your sleep </h4>
+    <fieldset>
+      <input id="varname" placeholder="Variable name" type="text" tabindex="1" required autofocus>
+    </fieldset>
+    <fieldset>
+      <input id="varmethod" placeholder="Variable tracking method" type="text" tabindex="3" required>
+    </fieldset>
+    <fieldset>
+      <select id="vartype" required>
+        <option value="" disabled selected hidden>Variable Type...</option>
+        <option value="Environment">Environment</option>
+        <option value="Habit">Habit</option>
+      </select>
+    </fieldset>
+    
+    
+    <fieldset>
+      <button name="submit" onclick="addvariable()" type="submit" id="contact-submit" data-submit="...Sending">Add Variable    </button>
+    </fieldset>
+
+    <fieldset>
+      <a href="dashboard.html"><button name="cancel" type="cancel" id="cancel">Cancel</button></a>
+    </fieldset>
+</div>
+
+ 
+</div>
+
+<script type="text/javascript" src="../js/add_variable.js"></script>
+</html>
+
